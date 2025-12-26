@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #2e3440;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.wrapper {
+    display: flex;
+    gap: 24px;
+}
+
+
+.card {
+    border-radius: 24px;
+    padding: 24px;
+}
+
+
+.left-card {
+    width: 320px;
+    height: 480px;
+    background: linear-gradient(180deg, #4fd1c5, #2c7a7b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+}
+
+
+.search {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.search input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.search button {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(0,0,0,0.25);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.weather-icon {
+    margin-bottom: 14px;
+}
+
+.weather-icon img {
+    width: 100px;
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+
+.location {
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.temp-section h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.temp-section p {
+    font-size: 18px;
+}
+
+.right-card {
+    width: 380px;
+    height: 480px;
+
+
+    background: rgba(38, 70, 83, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.6),
+        inset 0 0 30px rgba(255,255,255,0.08);
+
+    display: flex;
+    align-items: center;
+}
+
+
+.stats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.stats div {
+    background: rgba(255,255,255,0.2);
+    padding: 14px 18px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats span {
+    opacity: 0.85;
+}
+
+.stats strong {
+    font-size: 15px;
+}
+
+
+@keyframes floatIcon {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
